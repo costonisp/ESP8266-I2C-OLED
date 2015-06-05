@@ -13,9 +13,9 @@
 #include <Wire.h>
 #include "font.h"
 #define OLED_address  0x3c 
-#define SSID  "SSID"
-#define PASS  "Password"
-// ******************* String form to sent to the client-browser ************************************
+#define SSID  "SSID"               // your WiFi SSID
+#define PASS  "Password"           // your WiFi password
+// ******************* String form to sent to the client-browser to build a simple page*******************************
 String form =
   "<p>"
   "<center>"
@@ -42,15 +42,23 @@ void handle_msg() {
   String decodedMsg = msg;
   // Restore special characters that are misformed to %char by the client browser
   decodedMsg.replace("+", " ");      
+  decodedMsg.replace("%21", "!");  
+  decodedMsg.replace("%22", "");  
   decodedMsg.replace("%23", "#");
   decodedMsg.replace("%24", "$");
+  decodedMsg.replace("%25", "%");  
   decodedMsg.replace("%26", "&");
+  decodedMsg.replace("%27", "'");  
   decodedMsg.replace("%28", "(");
   decodedMsg.replace("%29", ")");
   decodedMsg.replace("%2A", "*");
+  decodedMsg.replace("%2B", "+");  
+  decodedMsg.replace("%2C", ",");  
+  decodedMsg.replace("%3E", ">");  
   decodedMsg.replace("%3C", "<");  
   decodedMsg.replace("%3D", "=");  
-  decodedMsg.replace("%3E", ">");  
+  decodedMsg.replace("%3E", ">");
+  decodedMsg.replace("%40", "@");  
   //Serial.println(decodedMsg);                   // print original string to monitor
   unsigned int lengte = decodedMsg.length();      // length of received message
   for  (int i=0;i<lengte;i++)                     // prints up to 8 rows of 16 characters.
