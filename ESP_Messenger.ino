@@ -13,8 +13,8 @@
 #include <Wire.h>
 #include "font.h"
 #define OLED_address  0x3c 
-#define SSID  "FRITZ"
-#define PASS  "33149193jc"
+#define SSID  "SSID"
+#define PASS  "Password"
 // ******************* String form to sent to the client-browser ************************************
 String form =
   "<p>"
