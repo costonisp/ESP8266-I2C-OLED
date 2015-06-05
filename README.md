@@ -21,4 +21,5 @@ Connections Oled - ESP8266:
 Oled-SDA connected to GPIO0 of ESP
 
 Oled-SCL connected to GPIO2 of ESP
+The I2C Oled board used has a SDD1306 controller. I did not (yet) test this sketch different controllers line SH1106.
 
