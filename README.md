@@ -17,6 +17,8 @@ In your browser type the local-IP of the ESP server, it will open a simple page 
 This text will be shown on the oled that is connected to the ESP.
 
 Connections Oled - ESP8266:
+
 Oled-SDA connected to GPIO0 of ESP
+
 Oled-SCL connected to GPIO2 of ESP
 
