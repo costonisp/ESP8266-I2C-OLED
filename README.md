@@ -3,7 +3,6 @@ A I2C screen to show messages received from a client-browser.
 
 Copy the ESP_Messenger into your Arduino IDE and save as a new file.
 Also copy the font.h file in the same folder.
-The file OLED-display driver is not needed anymore, it is merged with main.
 
 Make sure you installed ARDUINO-ESP-IDE addon. https://github.com/sandeepmistry/esp8266-Arduino
 In the Arduino IDE you choose generic ESP module as boardtype it will compile without errors.
